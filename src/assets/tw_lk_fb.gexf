@@ -1,0 +1,956 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns:viz="http://www.gexf.net/1.2draft/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.gephi.org/gexf/1.2draft" xmlns:ns0="xsi" version="1.2" ns0:schemaLocation="http://www.gephi.org/gexf/1.1draft http://gephi.org/gexf/1.2draft.xsd">
+  <meta lastmodified="2020-08-12">
+    <creator>Alignment</creator>
+    <description>the Social networks</description>
+  </meta>
+  <graph defaultedgetype="undirected" label="the Social networks" mode="static" timeformat="double">
+    <attributes class="node" mode="static">
+      <attribute id="modularity_class" title="Modularity Class" type="integer"/>
+      <attribute id="name" title="name" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="1" label="twitter.com/Susan_Hennessey">
+        <attvalues>
+          <attvalue for="name" value="Susan Hennessey"/>
+          <attvalue for="modularity_class" value="0"/>
+        </attvalues>
+        <viz:size value="21.259154578578176"/>
+        <viz:position x="-461.50026749195445" y="-114.71833406891237" z="8.528166593108764"/>
+        <viz:color r="30" g="144" b="255"/>
+      </node>
+      <node id="10" label="twitter.com/JarrettStepman">
+        <attvalues>
+          <attvalue for="name" value="Jarrett Stepman"/>
+          <attvalue for="modularity_class" value="0"/>
+        </attvalues>
+        <viz:size value="10.098626785927829"/>
+        <viz:position x="-464.5295229536956" y="172.4533211364697" z="7.24533211364697"/>
+        <viz:color r="30" g="144" b="255"/>
+      </node>
+      <node id="101" label="https://www.linkedin.com/in/arthur-brooks-343ba1196">
+        <attvalues>
+          <attvalue for="name" value="Arthur Brooks"/>
+          <attvalue for="modularity_class" value="1"/>
+        </attvalues>
+        <viz:size value="17.753637147641612"/>
+        <viz:position x="69.67249155142088" y="-126.3361457398684" z="7.36638542601316"/>
+        <viz:color r="162" g="205" b="90"/>
+      </node>
+      <node id="102" label="https://www.linkedin.com/in/caroline-casagrande-b015636">
+        <attvalues>
+          <attvalue for="name" value="Caroline Casagrande"/>
+          <attvalue for="modularity_class" value="1"/>
+        </attvalues>
+        <viz:size value="5.155542606810137"/>
+        <viz:position x="-96.43138788526824" y="-67.9856991891016" z="3.20143008108984"/>
+        <viz:color r="162" g="205" b="90"/>
+      </node>
+      <node id="103" label="https://www.linkedin.com/in/charlie-kirk">
+        <attvalues>
+          <attvalue for="name" value="Charlie Kirk"/>
+          <attvalue for="modularity_class" value="1"/>
+        </attvalues>
+        <viz:size value="30.9899907223976"/>
+        <viz:position x="-49.16627287533311" y="-87.36687159453243" z="1.2633128405467566"/>
+        <viz:color r="162" g="205" b="90"/>
+      </node>
+      <node id="104" label="https://www.linkedin.com/in/daniel-drezner-3907555">
+        <attvalues>
+          <attvalue for="name" value="Daniel Drezner"/>
+          <attvalue for="modularity_class" value="1"/>
+        </attvalues>
+        <viz:size value="24.98393478358309"/>
+        <viz:position x="63.71769389247311" y="9.100679511656429" z="0.9100679511656429"/>
+        <viz:color r="162" g="205" b="90"/>
+      </node>
+      <node id="105" label="https://www.linkedin.com/in/max-boot-65118854">
+        <attvalues>
+          <attvalue for="name" value="Max Boot"/>
+          <attvalue for="modularity_class" value="1"/>
+        </attvalues>
+        <viz:size value="7.879728097070586"/>
+        <viz:position x="-6.132366209041038" y="-40.91410769548007" z="5.908589230451993"/>
+        <viz:color r="162" g="205" b="90"/>
+      </node>
+      <node id="106" label="https://www.linkedin.com/in/norman-eisen-98b550108">
+        <attvalues>
+          <attvalue for="name" value="Norman Eisen"/>
+          <attvalue for="modularity_class" value="1"/>
+        </attvalues>
+        <viz:size value="11.727262634343372"/>
+        <viz:position x="-20.39064786302322" y="-181.8742974478266" z="1.8125702552173415"/>
+        <viz:color r="162" g="205" b="90"/>
+      </node>
+      <node id="107" label="https://www.linkedin.com/in/tony-sayegh-2b74201">
+        <attvalues>
+          <attvalue for="name" value="Tony Sayegh"/>
+          <attvalue for="modularity_class" value="1"/>
+        </attvalues>
+        <viz:size value="15.128451119620959"/>
+        <viz:position x="-85.6622210805894" y="149.54519639520583" z="4.9545196395205835"/>
+        <viz:color r="162" g="205" b="90"/>
+      </node>
+      <node id="108" label="https://www.linkedin.com/in/antonio-machenguer-80b8b945">
+        <attvalues>
+          <attvalue for="name" value="Antonio Machenguer"/>
+          <attvalue for="modularity_class" value="1"/>
+        </attvalues>
+        <viz:size value="15.929861470961175"/>
+        <viz:position x="-10.720098488372514" y="-37.263665343039555" z="6.273633465696045"/>
+        <viz:color r="162" g="205" b="90"/>
+      </node>
+      <node id="109" label="https://www.linkedin.com/in/arneduncan">
+        <attvalues>
+          <attvalue for="name" value="Arne Duncan"/>
+          <attvalue for="modularity_class" value="1"/>
+        </attvalues>
+        <viz:size value="14.433775069902996"/>
+        <viz:position x="54.32076404658639" y="137.00960710012913" z="3.7009607100129127"/>
+        <viz:color r="162" g="205" b="90"/>
+      </node>
+      <node id="11" label="twitter.com/normeisen">
+        <attvalues>
+          <attvalue for="name" value="Norm Eisen"/>
+          <attvalue for="modularity_class" value="0"/>
+        </attvalues>
+        <viz:size value="9.522561345516177"/>
+        <viz:position x="-396.5869534210602" y="76.86116697829691" z="7.68611669782969"/>
+        <viz:color r="30" g="144" b="255"/>
+      </node>
+      <node id="110" label="https://www.linkedin.com/in/arthur-milikh-5507591a">
+        <attvalues>
+          <attvalue for="name" value="Arthur Milikh"/>
+          <attvalue for="modularity_class" value="1"/>
+        </attvalues>
+        <viz:size value="10.724051414476097"/>
+        <viz:position x="-34.20421085724922" y="156.90827367960964" z="5.690827367960964"/>
+        <viz:color r="162" g="205" b="90"/>
+      </node>
+      <node id="111" label="https://www.linkedin.com/in/arthur-kroeber-4bb8934">
+        <attvalues>
+          <attvalue for="name" value="Arthur R. Kroeber"/>
+          <attvalue for="modularity_class" value="1"/>
+        </attvalues>
+        <viz:size value="14.703414827863053"/>
+        <viz:position x="-19.58278510543238" y="-101.80094127072476" z="9.819905872927524"/>
+        <viz:color r="162" g="205" b="90"/>
+      </node>
+      <node id="112" label="https://www.linkedin.com/in/arturo-sarukhan-949364b6">
+        <attvalues>
+          <attvalue for="name" value="Arturo Sarukhan"/>
+          <attvalue for="modularity_class" value="1"/>
+        </attvalues>
+        <viz:size value="6.234572729931762"/>
+        <viz:position x="-31.93305167805528" y="78.94262167707802" z="7.894262167707802"/>
+        <viz:color r="162" g="205" b="90"/>
+      </node>
+      <node id="113" label="https://www.linkedin.com/in/ashley-feng-459a16a0">
+        <attvalues>
+          <attvalue for="name" value="Ashley Feng"/>
+          <attvalue for="modularity_class" value="1"/>
+        </attvalues>
+        <viz:size value="13.51343703104487"/>
+        <viz:position x="-76.85557153677644" y="-77.84003622577762" z="2.215996377422238"/>
+        <viz:color r="162" g="205" b="90"/>
+      </node>
+      <node id="114" label="https://www.linkedin.com/in/audra-kinney-028210aa">
+        <attvalues>
+          <attvalue for="name" value="Audra  Kinney"/>
+          <attvalue for="modularity_class" value="1"/>
+        </attvalues>
+        <viz:size value="23.458238690568706"/>
+        <viz:position x="-32.756279102351755" y="-0.2241959916282621" z="9.977580400837173"/>
+        <viz:color r="162" g="205" b="90"/>
+      </node>
+      <node id="115" label="https://www.linkedin.com/in/barry-bosworth-14496970">
+        <attvalues>
+          <attvalue for="name" value="Barry P. Bosworth"/>
+          <attvalue for="modularity_class" value="1"/>
+        </attvalues>
+        <viz:size value="22.283905612849793"/>
+        <viz:position x="-151.24391566584927" y="-134.15304777353074" z="6.584695222646925"/>
+        <viz:color r="162" g="205" b="90"/>
+      </node>
+      <node id="116" label="https://www.linkedin.com/in/barry-wides-a242237">
+        <attvalues>
+          <attvalue for="name" value="Barry R. Wides"/>
+          <attvalue for="modularity_class" value="1"/>
+        </attvalues>
+        <viz:size value="5.3154798503994405"/>
+        <viz:position x="-114.45771782948418" y="173.54917589856976" z="7.354917589856974"/>
+        <viz:color r="162" g="205" b="90"/>
+      </node>
+      <node id="117" label="https://www.linkedin.com/in/becca-portugal-7ba81575">
+        <attvalues>
+          <attvalue for="name" value="Becca Portugal"/>
+          <attvalue for="modularity_class" value="1"/>
+        </attvalues>
+        <viz:size value="23.19851314843276"/>
+        <viz:position x="-76.35063373160295" y="102.93038876369178" z="0.29303887636917736"/>
+        <viz:color r="162" g="205" b="90"/>
+      </node>
+      <node id="118" label="https://www.linkedin.com/in/becky-norton-dunlop-20b13">
+        <attvalues>
+          <attvalue for="name" value="Becky Norton Dunlop"/>
+          <attvalue for="modularity_class" value="1"/>
+        </attvalues>
+        <viz:size value="10.247364094677032"/>
+        <viz:position x="-77.81139569790093" y="64.45229957050938" z="6.4452299570509375"/>
+        <viz:color r="162" g="205" b="90"/>
+      </node>
+      <node id="119" label="https://www.linkedin.com/in/benpurser">
+        <attvalues>
+          <attvalue for="name" value="Benjamin Purser"/>
+          <attvalue for="modularity_class" value="1"/>
+        </attvalues>
+        <viz:size value="10.759021240788147"/>
+        <viz:position x="-81.95772844795135" y="78.72692839756574" z="7.872692839756574"/>
+        <viz:color r="162" g="205" b="90"/>
+      </node>
+      <node id="12" label="twitter.com/manishasingh">
+        <attvalues>
+          <attvalue for="name" value="Manisha Singh"/>
+          <attvalue for="modularity_class" value="0"/>
+        </attvalues>
+        <viz:size value="15.85163615563896"/>
+        <viz:position x="-273.0828272690162" y="192.44725598495066" z="9.244725598495066"/>
+        <viz:color r="30" g="144" b="255"/>
+      </node>
+      <node id="120" label="https://www.linkedin.com/in/beth-knickerbocker-120a8b38">
+        <attvalues>
+          <attvalue for="name" value="Beth Knickerbocker"/>
+          <attvalue for="modularity_class" value="1"/>
+        </attvalues>
+        <viz:size value="22.484387802491803"/>
+        <viz:position x="-10.017200836335746" y="-22.14725052610649" z="7.785274947389351"/>
+        <viz:color r="162" g="205" b="90"/>
+      </node>
+      <node id="121" label="https://www.linkedin.com/in/blair-levin-a5a39321">
+        <attvalues>
+          <attvalue for="name" value="Blair Levin"/>
+          <attvalue for="modularity_class" value="1"/>
+        </attvalues>
+        <viz:size value="20.604252515146303"/>
+        <viz:position x="-154.34081803870015" y="-189.70441721368826" z="1.0295582786311712"/>
+        <viz:color r="162" g="205" b="90"/>
+      </node>
+      <node id="122" label="https://www.linkedin.com/in/blair-pesses-64420833">
+        <attvalues>
+          <attvalue for="name" value="Blair Pesses"/>
+          <attvalue for="modularity_class" value="1"/>
+        </attvalues>
+        <viz:size value="19.847171402760402"/>
+        <viz:position x="-172.5414051615976" y="-95.88659539091165" z="0.4113404609088356"/>
+        <viz:color r="162" g="205" b="90"/>
+      </node>
+      <node id="123" label="https://www.linkedin.com/in/bobbie-kennedy-6b144268">
+        <attvalues>
+          <attvalue for="name" value="Bobbie Kennedy"/>
+          <attvalue for="modularity_class" value="1"/>
+        </attvalues>
+        <viz:size value="24.759373146000318"/>
+        <viz:position x="-93.88789117653437" y="-100.40145971158174" z="9.959854028841825"/>
+        <viz:color r="162" g="205" b="90"/>
+      </node>
+      <node id="124" label="https://www.linkedin.com/in/bonnie-jenkins-6650464">
+        <attvalues>
+          <attvalue for="name" value="Bonnie Jenkins"/>
+          <attvalue for="modularity_class" value="1"/>
+        </attvalues>
+        <viz:size value="10.223765333001108"/>
+        <viz:position x="-114.8009338444254" y="2.0327332441298473" z="0.20327332441298473"/>
+        <viz:color r="162" g="205" b="90"/>
+      </node>
+      <node id="125" label="https://www.linkedin.com/in/bonnieglaser">
+        <attvalues>
+          <attvalue for="name" value="Bonnie S. Glaser"/>
+          <attvalue for="modularity_class" value="1"/>
+        </attvalues>
+        <viz:size value="14.561135440135992"/>
+        <viz:position x="-41.82218435463284" y="-76.8636073696435" z="2.3136392630356495"/>
+        <viz:color r="162" g="205" b="90"/>
+      </node>
+      <node id="126" label="https://www.linkedin.com/in/brad-hershbein-2178ba168">
+        <attvalues>
+          <attvalue for="name" value="Brad Hershbein"/>
+          <attvalue for="modularity_class" value="1"/>
+        </attvalues>
+        <viz:size value="6.767281710951288"/>
+        <viz:position x="33.24046883381175" y="-37.26983727444626" z="6.273016272555374"/>
+        <viz:color r="162" g="205" b="90"/>
+      </node>
+      <node id="127" label="https://www.linkedin.com/in/brad-mcdearman-94bab9150">
+        <attvalues>
+          <attvalue for="name" value="Brad McDearman"/>
+          <attvalue for="modularity_class" value="1"/>
+        </attvalues>
+        <viz:size value="17.507759955931515"/>
+        <viz:position x="-114.11723323980175" y="12.469934171947639" z="1.2469934171947639"/>
+        <viz:color r="162" g="205" b="90"/>
+      </node>
+      <node id="128" label="https://www.linkedin.com/in/bradsetser">
+        <attvalues>
+          <attvalue for="name" value="Brad W. Setser"/>
+          <attvalue for="modularity_class" value="1"/>
+        </attvalues>
+        <viz:size value="16.089053081611425"/>
+        <viz:position x="54.55943375973192" y="-103.77660470131494" z="9.622339529868507"/>
+        <viz:color r="162" g="205" b="90"/>
+      </node>
+      <node id="13" label="twitter.com/realDonaldTrump">
+        <attvalues>
+          <attvalue for="name" value="Donald J. Trump"/>
+          <attvalue for="modularity_class" value="0"/>
+        </attvalues>
+        <viz:size value="40.69710560671424"/>
+        <viz:position x="-412.49298115942213" y="36.309020184632686" z="3.630902018463269"/>
+        <viz:color r="30" g="144" b="255"/>
+      </node>
+      <node id="14" label="twitter.com/charliekirk11">
+        <attvalues>
+          <attvalue for="name" value="Charlie Kirk"/>
+          <attvalue for="modularity_class" value="0"/>
+        </attvalues>
+        <viz:size value="59.299838692620842"/>
+        <viz:position x="-316.7417216607372" y="143.4251280814669" z="4.34251280814669"/>
+        <viz:color r="30" g="144" b="255"/>
+      </node>
+      <node id="15" label="twitter.com/richardbspencer">
+        <attvalues>
+          <attvalue for="name" value="Richard 🦁 Spencer"/>
+          <attvalue for="modularity_class" value="0"/>
+        </attvalues>
+        <viz:size value="21.153157189385723"/>
+        <viz:position x="-293.68654378418273" y="-158.62352614639858" z="4.137647385360141"/>
+        <viz:color r="30" g="144" b="255"/>
+      </node>
+      <node id="16" label="twitter.com/themaddimeNsion">
+        <attvalues>
+          <attvalue for="name" value="Jason Kessler"/>
+          <attvalue for="modularity_class" value="0"/>
+        </attvalues>
+        <viz:size value="23.057297601264363"/>
+        <viz:position x="-371.7468741614335" y="148.0279707856824" z="4.802797078568242"/>
+        <viz:color r="30" g="144" b="255"/>
+      </node>
+      <node id="17" label="twitter.com/drjamescdoBson">
+        <attvalues>
+          <attvalue for="name" value="Dr. James Dobson"/>
+          <attvalue for="modularity_class" value="0"/>
+        </attvalues>
+        <viz:size value="7.866187626419507"/>
+        <viz:position x="-264.72130010762834" y="76.57880628512484" z="7.657880628512483"/>
+        <viz:color r="30" g="144" b="255"/>
+      </node>
+      <node id="18" label="twitter.com/ambjohnbolton">
+        <attvalues>
+          <attvalue for="name" value="John Bolton"/>
+          <attvalue for="modularity_class" value="0"/>
+        </attvalues>
+        <viz:size value="23.42177964614327"/>
+        <viz:position x="-497.316822262186" y="197.40843804224423" z="9.740843804224426"/>
+        <viz:color r="30" g="144" b="255"/>
+      </node>
+      <node id="19" label="twitter.com/GordonGChang">
+        <attvalues>
+          <attvalue for="name" value="Gordon G. Chang"/>
+          <attvalue for="modularity_class" value="0"/>
+        </attvalues>
+        <viz:size value="12.73671424847649"/>
+        <viz:position x="-339.74419037296514" y="-149.6085255103103" z="5.03914744896897"/>
+        <viz:color r="30" g="144" b="255"/>
+      </node>
+      <node id="2" label="twitter.com/RuthMarcus">
+        <attvalues>
+          <attvalue for="name" value="Ruth Marcus"/>
+          <attvalue for="modularity_class" value="0"/>
+        </attvalues>
+        <viz:size value="6.286958266883358"/>
+        <viz:position x="-399.0451687024855" y="-126.0517820124527" z="7.39482179875473"/>
+        <viz:color r="30" g="144" b="255"/>
+      </node>
+      <node id="20" label="twitter.com/SecPompeo">
+        <attvalues>
+          <attvalue for="name" value="Secretary Pompeo"/>
+          <attvalue for="modularity_class" value="0"/>
+        </attvalues>
+        <viz:size value="8.056386512069427"/>
+        <viz:position x="-330.2535732111873" y="48.93332673643984" z="4.893332673643984"/>
+        <viz:color r="30" g="144" b="255"/>
+      </node>
+      <node id="201" label="facebook.com/ArthurBrooks">
+        <attvalues>
+          <attvalue for="name" value="Arthur Brooks"/>
+          <attvalue for="modularity_class" value="2"/>
+        </attvalues>
+        <viz:size value="17.683822056780063"/>
+        <viz:position x="292.98814481189083" y="-148.38697150679803" z="5.161302849320197"/>
+        <viz:color r="75" g="75" b="75"/>
+      </node>
+      <node id="202" label="facebook.com/carolinecasagrade.nj">
+        <attvalues>
+          <attvalue for="name" value="Caroline Casagrande"/>
+          <attvalue for="modularity_class" value="2"/>
+        </attvalues>
+        <viz:size value="7.843336821858244"/>
+        <viz:position x="361.793580989575" y="-53.37049112361636" z="4.662950887638364"/>
+        <viz:color r="75" g="75" b="75"/>
+      </node>
+      <node id="203" label="facebook.com/danielwdrezner">
+        <attvalues>
+          <attvalue for="name" value="Daniel W. Drezner"/>
+          <attvalue for="modularity_class" value="2"/>
+        </attvalues>
+        <viz:size value="7.7414392638409275"/>
+        <viz:position x="296.14788975395925" y="-73.11425939417458" z="2.6885740605825426"/>
+        <viz:color r="75" g="75" b="75"/>
+      </node>
+      <node id="204" label="facebook.com/DonaldTrump">
+        <attvalues>
+          <attvalue for="name" value="Donald J. Trump"/>
+          <attvalue for="modularity_class" value="2"/>
+        </attvalues>
+        <viz:size value="31.124632393715245"/>
+        <viz:position x="179.2705051923731" y="-155.065002901573" z="4.493499709842702"/>
+        <viz:color r="75" g="75" b="75"/>
+      </node>
+      <node id="205" label="facebook.com/jarrettlstepman">
+        <attvalues>
+          <attvalue for="name" value="Jarrett Stepman"/>
+          <attvalue for="modularity_class" value="2"/>
+        </attvalues>
+        <viz:size value="12.671737389784925"/>
+        <viz:position x="220.4942319304555" y="13.769060645082831" z="1.3769060645082831"/>
+        <viz:color r="75" g="75" b="75"/>
+      </node>
+      <node id="206" label="facebook.com/MaxBootAuthorPage">
+        <attvalues>
+          <attvalue for="name" value="Max Boot"/>
+          <attvalue for="modularity_class" value="2"/>
+        </attvalues>
+        <viz:size value="24.819115413816817"/>
+        <viz:position x="171.8557171619862" y="-85.99049767429135" z="1.4009502325708656"/>
+        <viz:color r="75" g="75" b="75"/>
+      </node>
+      <node id="207" label="facebook.com/norman.eisen">
+        <attvalues>
+          <attvalue for="name" value="Norm Eisen"/>
+          <attvalue for="modularity_class" value="2"/>
+        </attvalues>
+        <viz:size value="14.74312862462057"/>
+        <viz:position x="271.8164443318548" y="21.27789026682909" z="2.127789026682909"/>
+        <viz:color r="75" g="75" b="75"/>
+      </node>
+      <node id="208" label="facebook.com/realCharlieKirk">
+        <attvalues>
+          <attvalue for="name" value="Charlie Kirk"/>
+          <attvalue for="modularity_class" value="2"/>
+        </attvalues>
+        <viz:size value="31.91813961788497"/>
+        <viz:position x="289.55352424539336" y="-38.26233111756654" z="6.173766888243346"/>
+        <viz:color r="75" g="75" b="75"/>
+      </node>
+      <node id="209" label="facebook.com/ruthmarcus">
+        <attvalues>
+          <attvalue for="name" value="Ruth Marcus"/>
+          <attvalue for="modularity_class" value="2"/>
+        </attvalues>
+        <viz:size value="10.538353264746345"/>
+        <viz:position x="224.58523630601303" y="131.2712561301451" z="3.1271256130145098"/>
+        <viz:color r="75" g="75" b="75"/>
+      </node>
+      <node id="21" label="twitter.com/seanhannity">
+        <attvalues>
+          <attvalue for="name" value="Sean Hannity"/>
+          <attvalue for="modularity_class" value="0"/>
+        </attvalues>
+        <viz:size value="6.114543567706376"/>
+        <viz:position x="-300.2575081961701" y="149.27907973055224" z="4.927907973055223"/>
+        <viz:color r="30" g="144" b="255"/>
+      </node>
+      <node id="210" label="facebook.com/teamjohnbolton">
+        <attvalues>
+          <attvalue for="name" value="John Bolton"/>
+          <attvalue for="modularity_class" value="2"/>
+        </attvalues>
+        <viz:size value="20.584120606124856"/>
+        <viz:position x="188.38305692443976" y="168.4672927110965" z="6.846729271109648"/>
+        <viz:color r="75" g="75" b="75"/>
+      </node>
+      <node id="22" label="twitter.com/SenTomCotton">
+        <attvalues>
+          <attvalue for="name" value="Tom Cotton"/>
+          <attvalue for="modularity_class" value="0"/>
+        </attvalues>
+        <viz:size value="20.73499070880274"/>
+        <viz:position x="-383.6202940309058" y="34.46663628872226" z="3.4466636288722263"/>
+        <viz:color r="30" g="144" b="255"/>
+      </node>
+      <node id="23" label="twitter.com/eugenegu">
+        <attvalues>
+          <attvalue for="name" value="Eugene Gu, MD"/>
+          <attvalue for="modularity_class" value="0"/>
+        </attvalues>
+        <viz:size value="11.897840966047742"/>
+        <viz:position x="-381.7764702089203" y="78.61359571539327" z="7.861359571539328"/>
+        <viz:color r="30" g="144" b="255"/>
+      </node>
+      <node id="3" label="twitter.com/cccasagrande1">
+        <attvalues>
+          <attvalue for="name" value="Caroline Casagrande"/>
+          <attvalue for="modularity_class" value="0"/>
+        </attvalues>
+        <viz:size value="23.342942839280983"/>
+        <viz:position x="-483.52874580236755" y="-185.12314689173323" z="1.4876853108266772"/>
+        <viz:color r="30" g="144" b="255"/>
+      </node>
+      <node id="4" label="twitter.com/MaxBoot">
+        <attvalues>
+          <attvalue for="name" value="Max Boot"/>
+          <attvalue for="modularity_class" value="0"/>
+        </attvalues>
+        <viz:size value="15.935168486012167"/>
+        <viz:position x="-325.49397671264154" y="-45.676359450241534" z="5.432364054975847"/>
+        <viz:color r="30" g="144" b="255"/>
+      </node>
+      <node id="5" label="twitter.com/arthurbrooks">
+        <attvalues>
+          <attvalue for="name" value="Arthur Brooks"/>
+          <attvalue for="modularity_class" value="0"/>
+        </attvalues>
+        <viz:size value="10.870262416943692"/>
+        <viz:position x="-462.78449130715677" y="-142.30953366903756" z="5.769046633096245"/>
+        <viz:color r="30" g="144" b="255"/>
+      </node>
+      <node id="6" label="twitter.com/joshrauh">
+        <attvalues>
+          <attvalue for="name" value="Joshua Rauh"/>
+          <attvalue for="modularity_class" value="0"/>
+        </attvalues>
+        <viz:size value="10.82786465625918"/>
+        <viz:position x="-396.74966100439724" y="177.8058281254531" z="7.780582812545308"/>
+        <viz:color r="30" g="144" b="255"/>
+      </node>
+      <node id="7" label="twitter.com/tony4ny">
+        <attvalues>
+          <attvalue for="name" value="Tony Sayegh Jr."/>
+          <attvalue for="modularity_class" value="0"/>
+        </attvalues>
+        <viz:size value="11.042860799747206"/>
+        <viz:position x="-387.0248659290885" y="-175.31474099561296" z="2.468525900438703"/>
+        <viz:color r="30" g="144" b="255"/>
+      </node>
+      <node id="8" label="twitter.com/dandrezner">
+        <attvalues>
+          <attvalue for="name" value="Daniel W. Drezner"/>
+          <attvalue for="modularity_class" value="0"/>
+        </attvalues>
+        <viz:size value="11.557119127686947"/>
+        <viz:position x="-390.80724219440026" y="147.8258034356594" z="4.7825803435659395"/>
+        <viz:color r="30" g="144" b="255"/>
+      </node>
+      <node id="9" label="twitter.com/benjaminwittes">
+        <attvalues>
+          <attvalue for="name" value="Benjamin Wittes"/>
+          <attvalue for="modularity_class" value="0"/>
+        </attvalues>
+        <viz:size value="11.704432986735707"/>
+        <viz:position x="-234.7335505419315" y="-101.0067762985484" z="9.89932237014516"/>
+        <viz:color r="30" g="144" b="255"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="0" source="5" target="101" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="1" source="3" target="102" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="100" source="101" target="201" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="101" source="102" target="202" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="102" source="103" target="208" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="103" source="104" target="203" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="104" source="105" target="206" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="105" source="106" target="207" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="2" source="14" target="103" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="200" source="5" target="201" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="201" source="3" target="202" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="202" source="8" target="203" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="203" source="13" target="204" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="204" source="10" target="205" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="205" source="4" target="206" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="206" source="11" target="207" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="207" source="14" target="208" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="208" source="2" target="209" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="209" source="18" target="210" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="3" source="8" target="104" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="300" source="1" target="11" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="301" source="1" target="9" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="302" source="1" target="4" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="303" source="1" target="2" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="304" source="1" target="8" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="305" source="2" target="11" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="306" source="2" target="9" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="307" source="2" target="4" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="308" source="2" target="18" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="309" source="2" target="14" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="310" source="2" target="5" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="311" source="2" target="13" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="312" source="2" target="1" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="313" source="2" target="8" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="314" source="3" target="9" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="315" source="3" target="13" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="316" source="4" target="11" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="317" source="4" target="9" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="318" source="4" target="18" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="319" source="4" target="5" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="320" source="4" target="2" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="321" source="4" target="13" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="322" source="4" target="1" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="323" source="4" target="8" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="324" source="5" target="18" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="325" source="5" target="13" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="326" source="6" target="14" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="327" source="6" target="13" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="328" source="6" target="5" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="329" source="7" target="18" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="330" source="7" target="13" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="331" source="7" target="14" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="332" source="7" target="21" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="333" source="7" target="22" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="334" source="8" target="13" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="335" source="8" target="9" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="336" source="8" target="4" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="337" source="8" target="1" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="338" source="9" target="11" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="339" source="9" target="4" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="340" source="9" target="18" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="341" source="9" target="2" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="342" source="9" target="1" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="343" source="9" target="8" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="344" source="10" target="18" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="345" source="10" target="5" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="346" source="10" target="19" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="347" source="10" target="13" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="348" source="10" target="14" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="349" source="10" target="21" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="350" source="10" target="22" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="351" source="11" target="9" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="352" source="11" target="4" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="353" source="11" target="18" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="354" source="11" target="2" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="355" source="11" target="13" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="356" source="11" target="1" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="357" source="11" target="21" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="358" source="12" target="18" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="359" source="12" target="22" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="360" source="12" target="13" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="361" source="12" target="14" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="362" source="13" target="21" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="363" source="14" target="11" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="364" source="14" target="7" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="365" source="14" target="9" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="366" source="14" target="4" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="367" source="14" target="6" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="368" source="14" target="12" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="369" source="14" target="19" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="370" source="14" target="5" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="371" source="14" target="2" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="372" source="14" target="3" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="373" source="14" target="1" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="374" source="14" target="8" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="375" source="14" target="10" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="376" source="14" target="22" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="377" source="15" target="13" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="378" source="15" target="14" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="379" source="16" target="13" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="380" source="16" target="14" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="381" source="17" target="21" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="382" source="17" target="13" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="383" source="18" target="5" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="384" source="18" target="19" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="385" source="18" target="13" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="386" source="18" target="14" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="387" source="18" target="21" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="388" source="18" target="22" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="389" source="19" target="18" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="390" source="19" target="22" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="391" source="19" target="13" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="392" source="19" target="14" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="393" source="20" target="18" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="394" source="20" target="13" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="395" source="21" target="13" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="396" source="23" target="13" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="4" source="4" target="105" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="400" source="106" target="115" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="401" source="106" target="127" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="402" source="106" target="121" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="403" source="115" target="127" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="404" source="115" target="121" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="405" source="121" target="127" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="406" source="114" target="117" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="407" source="117" target="118" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="408" source="114" target="118" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="409" source="104" target="127" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="5" source="11" target="106" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+      <edge id="6" source="7" target="107" weight="1">
+        <viz:color r="70" g="75" b="75"/>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
