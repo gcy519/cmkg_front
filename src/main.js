@@ -3,46 +3,46 @@ import App from './App.vue'
 import router from './router/index'
 import store from './store/index'
 import {
-  Badge,
-  Button,
-  Card,
-  Checkbox,
-  CheckboxGroup,
-  ColorPicker,
-  Col,
-  DatePicker,
-  Dialog,
-  Dropdown,
-  DropdownMenu,
-  DropdownItem,
-  Form,
-  FormItem,
-  Header,
-  Icon,
-  Input,
-  Link,
-  Main,
-  Menu,
-  MenuItem,
-  Message,
-  Option,
-  Pagination,
-  Popover,
-  Progress,
-  Radio,
-  RadioGroup,
-  Row,
-  Select,
-  Submenu,
-  Switch,
-  Table,
-  TableColumn,
-  Tabs,
-  TabPane,
-  Tag,
-  TimePicker,
-  Transfer,
-  Upload
+    Badge,
+    Button,
+    Card,
+    Checkbox,
+    CheckboxGroup,
+    ColorPicker,
+    Col,
+    DatePicker,
+    Dialog,
+    Dropdown,
+    DropdownMenu,
+    DropdownItem,
+    Form,
+    FormItem,
+    Header,
+    Icon,
+    Input,
+    Link,
+    Main,
+    Menu,
+    MenuItem,
+    Message,
+    Option,
+    Pagination,
+    Popover,
+    Progress,
+    Radio,
+    RadioGroup,
+    Row,
+    Select,
+    Submenu,
+    Switch,
+    Table,
+    TableColumn,
+    Tabs,
+    TabPane,
+    Tag,
+    TimePicker,
+    Transfer,
+    Upload
 } from 'element-ui'
 import './assets/css/common.scss'
 import VueI18n from 'vue-i18n'
@@ -98,28 +98,28 @@ Vue.use(Transfer)
 Vue.use(Upload)
 Vue.prototype.$message = Message
 
-// // 根据环境变量决定是否引入mock
-// if (process.env.VUE_APP_USE_MOCK || (process.env.NODE_ENV !== 'production' && !process.env.VUE_APP_BACK_END_URL)) {
-//   const Mock = require('./mock/index').default
-//   Mock.mockData()
-// }
+// 根据环境变量决定是否引入mock
+if (process.env.VUE_APP_USE_MOCK || (process.env.NODE_ENV !== 'production' && !process.env.VUE_APP_BACK_END_URL)) {
+    const Mock = require('./mock/index').default
+    Mock.mockData()
+}
 
 /* vue-i18n */
 Vue.use(VueI18n)
 const messages = {
-  'en': Object.assign(myEnLocale, enLocale),
-  'zh-cn': Object.assign(myZhLocale, zhLocale)
+    'en': Object.assign(myEnLocale, enLocale),
+    'zh-cn': Object.assign(myZhLocale, zhLocale)
 }
 const lang = 'zh-cn'
 const i18n = new VueI18n({
-  locale: lang,
-  messages
+    locale: lang,
+    messages
 })
 ElementLocale.i18n((key, value) => i18n.t(key, value))
 
 new Vue({
-  router,
-  store,
-  i18n,
-  render: h => h(App)
+    router,
+    store,
+    i18n,
+    render: h => h(App)
 }).$mount('#app')

@@ -4,10 +4,12 @@ import store from '../store/index'
 import { MessageBox, Message } from 'element-ui'
 
 const axiosCustom = axios.create({
-  // baseURL: process.env.BASE_URL,
-  baseURL: '//10.109.246.103:7999/',
-  withCredentials: false
+    // baseURL: process.env.BASE_URL,
+    // baseURL: '//localhost:8080/',
+    baseURL: '//10.109.246.102:8000/',
+    withCredentials: false
 })
+
 
 // axiosCustom.interceptors.request.use(function (config) {
 //   config.headers.token = localStorage.getItem('user-token')
@@ -19,28 +21,30 @@ const axiosCustom = axios.create({
  * @param {String} url [请求的url地址] 
  * @param {Object} params [请求时携带的参数] 
  */
-export function get(url, params,config = {}){    
-  
-  // return new Promise((resolve, reject) =>{   
-  const args = Object.assign({
-    'method': 'get',
-    'url': url,
-    'params':params
-  }, config)
+export function get(url, params, config = {}) {
+    // axiosCustom.defaults.headers['Access-Control-Allow-Origin'] = '*'
+    // return new Promise((resolve, reject) =>{   
+    const args = Object.assign({
+        'method': 'get',
+        'url': url,
+        'params': params
+    }, config)
 
-  return axiosCustom(args).then((res) => {
-    return res.data
-  }, (error) => {
-    //自动处理网络请求错误
-      //自动处理网络请求错误
-      console.error(error)
-      error.response = error.response || {}
-      const errStatus = error.response.status || -100
-      if (autoErrorRes && error.message) {
-        MessageBox.alert('网络请求异常，请联系管理员！', '请求异常：' + errStatus, { confirmButtonText: '确定' })
-      }
-      return Promise.reject(error)
-  })}
+    return axiosCustom(args).then((res) => {
+        return res.data
+    }, (error) => {
+        return error
+            //自动处理网络请求错误
+            //自动处理网络请求错误
+            // console.error(error)
+            // error.response = error.response || {}
+            // const errStatus = error.response.status || -100
+            // if (autoErrorRes && error.message) {
+            //   MessageBox.alert('网络请求异常，请联系管理员！', '请求异常：' + errStatus, { confirmButtonText: '确定' })
+            // }
+            // return Promise.reject(error)
+    })
+}
 
 
 /*
@@ -77,50 +81,50 @@ export function get(url, params,config = {}){
  *
  **/
 
- // Make a request for a user with a given ID
- 
+// Make a request for a user with a given ID
+
 /* 普通请求 */
 export const request = (url, params = {}, config = {}, autoErrorRes = true, autoErrorData = true, autoCancel = true) => {
-  // if (autoCancel) {
-  //   config = Object.assign({ cancelToken: store.state.source.token }, config)
-  // }
-  const args = Object.assign({
-    'method': 'post',
-    'url': url,
-    'data': params
-  }, config)
-  // 处理url传参
-  if (!['put', 'post', 'patch'].includes(args.method.toLowerCase())) {
-    args['params'] = args['params'] || args['data']
-    args['paramsSerializer'] = args['paramsSerializer'] || function (params) {
-      return qs.stringify(params, { arrayFormat: 'indices' })
+    // if (autoCancel) {
+    //   config = Object.assign({ cancelToken: store.state.source.token }, config)
+    // }
+    const args = Object.assign({
+            'method': 'post',
+            'url': url,
+            'data': params
+        }, config)
+        // 处理url传参
+    if (!['put', 'post', 'patch'].includes(args.method.toLowerCase())) {
+        args['params'] = args['params'] || args['data']
+        args['paramsSerializer'] = args['paramsSerializer'] || function(params) {
+            return qs.stringify(params, { arrayFormat: 'indices' })
+        }
     }
-  }
     return axiosCustom(args).then((res) => {
-    // // 未登录
-    // if (res.data.type === 'login') {
-    //   Message({ message: '登录失效，请重新登录', type: 'error' })
-    //   window.location.href = res.data.url || '/#/login'
-    // }
-    // 自动处理返回格式错误
-    // if (autoErrorData && res.data.hasOwnProperty('code') && res.data.code !== 1) {
-    //   console.error(res.data)
-    //   const errMsg = res.data.errorMessage || '未知的服务器错误，请联系管理员！'
-    //   const errCod = res.data.code
-    //   MessageBox.alert(errMsg, '请求异常：' + errCod, { confirmButtonText: '确定' })
-    //   return Promise.reject(res.data)
-    // }
-    return res.data
-  }, (error) => {
-    //自动处理网络请求错误
-    console.error(error)
-    error.response = error.response || {}
-    const errStatus = error.response.status || -100
-    if (autoErrorRes && error.message) {
-      MessageBox.alert('网络请求异常，请联系管理员！', '请求异常：' + errStatus, { confirmButtonText: '确定' })
-    }
-    return Promise.reject(error)
-  })
+        // // 未登录
+        // if (res.data.type === 'login') {
+        //   Message({ message: '登录失效，请重新登录', type: 'error' })
+        //   window.location.href = res.data.url || '/#/login'
+        // }
+        // 自动处理返回格式错误
+        // if (autoErrorData && res.data.hasOwnProperty('code') && res.data.code !== 1) {
+        //   console.error(res.data)
+        //   const errMsg = res.data.errorMessage || '未知的服务器错误，请联系管理员！'
+        //   const errCod = res.data.code
+        //   MessageBox.alert(errMsg, '请求异常：' + errCod, { confirmButtonText: '确定' })
+        //   return Promise.reject(res.data)
+        // }
+        return res.data
+    }, (error) => {
+        //自动处理网络请求错误
+        console.error(error)
+        error.response = error.response || {}
+        const errStatus = error.response.status || -100
+        if (autoErrorRes && error.message) {
+            MessageBox.alert('网络请求异常，请联系管理员！', '请求异常：' + errStatus, { confirmButtonText: '确定' })
+        }
+        return Promise.reject(error)
+    })
 }
 
 // /* 使用sessionStorage缓存的请求 */

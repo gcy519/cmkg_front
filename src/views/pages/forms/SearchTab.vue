@@ -4,6 +4,16 @@
       <div class="div-tab">
         <el-tabs v-model="activeTab" type="card" @tab-click="handleClick">
           
+          <!-- 综合搜索框 -->
+          <el-tab-pane label="综合">
+          <el-row>  
+              <el-col  span=20>
+                <el-input v-model="generalQuery" placeholder="请输入查询语句"></el-input>
+              </el-col>
+          </el-row>
+          <br/>
+          </el-tab-pane>
+
           <!-- 实体搜索框 -->
           <el-tab-pane label="实体">
           <el-row>  
@@ -58,7 +68,7 @@
     </div>
 
     <div class="div-search">
-            <el-button type="primary" @click="onSearchBtn" icon="el-icon-search">查询</el-button>
+            <el-button type="primary" class="btn-search" @click="onSearchBtn" icon="el-icon-search">查询</el-button>
     </div>
   
     
@@ -72,7 +82,7 @@
 </template>
 
 <script>
-import { requestHotSearch,requestRelation,getEntity,requestQA } from '@/api/user'
+import { requestHotSearch,getRelation,getEntity,requestQA } from '@/api/user'
 import PageFormsBase from './PageFormsBase'
 import Comment from './Comment'
 import { requestUserQuery } from '@/api/user'
@@ -86,7 +96,7 @@ export default {
   },
   data () {
     return {
-      typeString:['entity','relation','qa'],
+      typeString:['entity','entity','relation','qa'],
       activeTab:0,
       //热门搜索数据
       hotItems:[],
@@ -94,21 +104,11 @@ export default {
       entities: [],
       state: '',
       timeout:  null,
-
+      generalQuery:'',
       entityQuery:'',
       questionQuery:'',
       relationQuery: [null,null],
 
-      formInline: {
-        param1: '哪吒',
-      },
-      tableData: [{
-        date: '2016-05-03',
-
-        name: '王小虎',
-
-        address: '上海市普陀区金沙江路 1518 弄'
-      }],
       rules: {
         param1: [
           { required: true, message: '请输入', trigger: 'blur' },
@@ -129,13 +129,6 @@ export default {
     }
   },
   methods: {
-    loadAll() {
-        return [
-          { "value": "三全鲜食（北新泾店）", "address": "长宁区新渔路144号" },
-          { "value": "Hot honey 首尔炸鸡（仙霞路）", "address": "上海市长宁区淞虹路661号" },
- 
-        ];
-    },
 
     handleClick(){
         this.result = ""
@@ -194,14 +187,48 @@ export default {
     Search(type,params){
       
       var self = this
-      const ENTITY = "0"
-      const RELATION = "1"
-      const QA = "2"
+      const GENERAL = "0"
+      const ENTITY = "1"
+      const RELATION = "2"
+      const QA = "3"
       self.result = ""
       //判断请求类型
       
       var type_str =String(type)
       switch(type_str){
+        
+        case GENERAL:{
+          if(self.generalQuery.length <=5){
+            getEntity(params).then(res => {
+              self.result = res.data
+            })
+          }
+          if(self.result.length > 0)
+            return;
+          
+          if(self.generalQuery.indexOf(" ") != -1){
+            var arr = self.generalQuery.split(" ")
+            var h = arr[0]
+            var t = arr[1]
+            var query = {
+              head:h,
+              tail:t,
+              type:"ht"
+            }
+            getRelation(query).then(res => {
+              self.result = "暂未获取到" + self.generalQuery + "的关系"  
+              if(res.data.relation.length>0){
+                self.result = self.generalQuery + "的关系为 " + res.data.relation
+              } 
+            })
+          }else{
+            requestQA(self.generalQuery).then(res => {
+              self.result = "暂未收录该问题，我们会考虑更新相关信息"
+              if(res.data.answer.length > 0)
+                self.result = res.data.answer
+            })
+          }
+        }
         case ENTITY:{
           if(params == null){
             params = self.entityQuery
@@ -216,31 +243,33 @@ export default {
           if(params != null){
             self.relationQuery = params.split("与")
           }
-          params = self.relationQuery
-          requestRelation(params).then(res => {
-            self.result = res.data
+          var query = {
+            head:self.relationQuery[0],
+            tail:self.relationQuery[1],
+            type:"ht"
+          }
+          getRelation(query).then(res => {
+            self.result = "暂未获取到" + self.relationQuery + "的关系"  
+            if(res.data.relation.length>0){
+              self.result = self.relationQuery + "的关系为" + res.data.relation
+            } 
           })
+          
           break;
         case QA:
-          if(params == null){
-            params = self.questionQuery
+          if(params != null){
+            self.questionQuery = params
           }
-          self.questionQuery = params
-          requestQA(params).then(res => {
-            self.result = res.data
+          requestQA(self.questionQuery).then(res => {
+            self.result = "小话我也不知道呢，您问点别的？"
+            if(res.data.answer.length > 0)
+              self.result = res.data.answer
           })
           break;
         default:
           alert('defalt')
       } 
-      
-      //result:text
     },
-
-    // resetForm(formName) {
-    //     this.$refs[formName].resetFields();
-    // }
-
   },
 
 
@@ -274,5 +303,7 @@ export default {
   height:auto;
   border-radius: 4px;
   border:1px solid rgb(248, 245, 245)
+}
+.btn-search{
 }
 </style>

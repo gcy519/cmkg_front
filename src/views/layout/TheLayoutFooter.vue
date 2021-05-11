@@ -19,7 +19,7 @@ export default {
 .footer {
   text-align: center; 
   color:white;
-  background:rgb(119, 58, 1)
+  background:#660000;
 
 }
 </style>

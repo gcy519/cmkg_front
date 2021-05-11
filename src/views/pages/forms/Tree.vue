@@ -1,6 +1,6 @@
 <template>
   <div>  
-    <div id="tree" style="width:500px;height:300px"></div>
+    <div id="tree" style="margin-top:10px; height:340px"></div>
   </div>
 </template>
 <script>
@@ -32,7 +32,7 @@ export default {
 
                     symbolSize: 6,
 
-                    initialTreeDepth: 3,
+                    initialTreeDepth: 1,
 
                     animationDurationUpdate: 750
 
@@ -49,7 +49,7 @@ export default {
             this.options.series[0].data[0] = res.data
             this.$nextTick(() => {
               this.graph.setOption(this.options);
-            });v
+            });
                 
           })
     }

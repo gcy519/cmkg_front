@@ -2,11 +2,11 @@
   <div>  
     <div class="div-paperinfo">
         <div id="u28" class="ax_default _形状">
-            <span style="text-decoration:none;">【数据录入情况】</span>
+            <span style="margin:10px" class="b-text">数据录入情况</span>
             
-            <span style="text-decoration:none;">录入文献：{{dataCollection.references_number}}     </span>
-            <span style="text-decoration:none;">实体：{{dataCollection.entities_number}}          </span>
-            <span style="text-decoration:none;">关系：{{dataCollection.relations_number}}         </span>
+            <span style="margin:10px" class="text">录入文献数: {{dataCollection.references_number}}     </span>
+            <span style="margin:10px" class="text">实体数: {{dataCollection.entities_number}}          </span>
+            <span style="margin:10px" class="text">关系数: {{dataCollection.relations_number}}         </span>
         </div>
     </div>
   </div>
@@ -40,7 +40,22 @@ export default {
 </script>
 <style scoped>
     .div-paperinfo{
-    background-color: rgb(190, 210, 240);
+    background-color: #CCCCCC;
     color: white;
+    }
+
+    .b-text{
+      font-family: PingFang SC;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+    }
+    .text{
+      font-family: PingFang SC;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 13px;
+      line-height: 22px;
     }
 </style>

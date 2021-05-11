@@ -1,8 +1,94 @@
 <template>
+<div class="home-background">
+    <!-- <div style="margin: 10px"> -->
+      <el-radio-group class="text" v-model="radio_source" @change="changSource">
+        <!-- <el-radio :label="0">西游记</el-radio> -->
+      </el-radio-group>
+    <!-- </div> -->
   <div class="m-home">
   <DataCollection></DataCollection>
+
   <SearchTab></SearchTab>
 
+
+  <div class="div-bottom">
+
+    <div align="center" class="div-title"><h1 style="center" class="h1-title">子图展示</h1></div>
+      <div class="echarts-container bg-background">
+        <div style="width:100%">
+            <the-graph></the-graph>
+        </div> 
+      </div> 
+    </div> 
+
+  <div class="div-top">
+      <div align="center" class="div-title"><h1 style="center" class="h1-title">图谱展示</h1></div>
+      <div class="echarts-container bg-background">
+        <the-tree ref='treeCharts'></the-tree>
+      </div>
+  </div>
+
+
+  </div>
+
+  <div class="div-half">
+    
+      <div align="center" class="div-title"><h1 style="center" class="h1-title">知识角</h1></div>
+      <div class="other-container bg-background">
+        <div class="div-knowlege-corner">
+          {{corner_story}}
+        </div>
+
+        <div style="float:right; margin-right:15px">
+          <el-button size="small" type="primary" round>查看子图</el-button>
+          <el-button size="small" type="primary" round @click="ChangeStory">换个故事</el-button> 
+        </div>
+    </div>
+
+  </div>
+
+  <div class="div-half-two">
+    
+      <div align="center" class="div-title">
+        <h1 style="center" class="h1-title">热门榜</h1>
+      </div>
+      <div class="other-container bg-background">
+      <div style="margin-top:10px;height:80%; width:100%" class="bg-background">
+        <div class="div-entity-list"> 
+            <el-col :span=30>
+              <el-dropdown @command="handleBoardCommand">
+                <span class="el-dropdown-link">
+                  {{currentBoards}}<i class="el-icon-arrow-down el-icon--right"></i>
+                </span>
+                <el-dropdown-menu slot="dropdown">
+                      <el-dropdown-item class="text"
+                        v-for="(item,index) in list_boards"
+                        :key="index"
+                        :command="index"
+                        :value="item">
+                      {{item}}
+                      </el-dropdown-item>
+                </el-dropdown-menu>
+              </el-dropdown>
+            </el-col>
+              <div class="div-outline" style="width: 150px">
+          　　　　<ul class="ul-board" >
+          　　　　　　<li style="width: 100px" v-for="(item,index) in billboard"
+                        v-bind:key="index"
+                        v-bind:class="[ 'li-unactive',billboard_active[index]? 'li-active' : '']"
+                        @click="selectEntity(item, index)" >{{item.name}}
+          　　　　　　</li>
+          　　　　</ul>
+              </div>
+          </div>
+          <div class="div-entity-intro text">
+            {{entityInfo}}
+          </div>
+      </div>
+    </div>
+  </div>
+
+<div class="div-comment">
 <el-dialog
   title="发布留言"
   :visible.sync="dialogVisible"
@@ -23,129 +109,30 @@
   </span>
 </el-dialog>
 
-<div class="div-comment">
-  <el-card style="height:98%">
-  <!-- <el-row type="flex" justify="center">
-    <el-col :span=12>
-      <el-image :src="src" class="login_image"></el-image>
-    </el-col>
-  </el-row> -->
-  <el-form ref="messForm" :model="messForm" :rules="rules" label-width="80px">
-    <el-row type="flex" justify="center">
-      <el-col>
-        <el-card class="card-comment">
-  　　　　<ul style="list-style:none">
-  　　　　　　<li v-for="(comment,index) in comments" 
-                v-bind:key="index">{{comment}}
-  　　　　　　</li>
-  　　　　</ul>
-        </el-card>
+
+    <!-- <el-row type="flex" justify="center">
+      <el-col :span=12>
+        <el-image :src="src" class="login_image"></el-image>
       </el-col>
-
-
-    <!-- <el-form-item>
-        <el-button type="primary" @click="submitMess('messForm')">立即发布</el-button>
-    </el-form-item> -->
-    </el-row>
-  </el-form>
-        <el-row>
-        <el-button class="btn-comment" type="text" @click="dialogVisible = true">点击留言</el-button>
+    </el-row> -->
+    <el-form ref="messForm" :model="messForm" :rules="rules" label-width="80px">
+      <el-row type="flex" justify="center">
+        <el-col>
+          <el-card class="card-comment">
+    　　　　<ul style="list-style:none">
+    　　　　　　<li v-for="(comment,index) in comments" 
+                  v-bind:key="index">{{comment}}
+    　　　　　　</li>
+    　　　　</ul>
+          </el-card>
+        </el-col>
       </el-row>
-</el-card>
+    </el-form>
+        <el-row>
+          <el-button class="btn-comment" type="text" @click="dialogVisible = true">点击留言</el-button>
+        </el-row>
 </div>
-
-  <div class="div-half">
-
-    <!-- <div class="function-content grid-content bg-purple"> -->
-      <div align="center"><h1 style="center">子图展示图</h1></div>
-      <div style="margin: 10px">
-
-        <el-radio-group v-model="radio_source" @change="changSource">
-          <el-radio :label="0">待补充</el-radio>
-          <el-radio :label="1">西游记</el-radio>
-        </el-radio-group>
-
-      </div>
-      <div class="grid-content bg-purple">
-        <the-tree ref='treeCharts'></the-tree>
-      </div>
-  </div>
-
-  <div class="div-half-two">
-
-   <!-- <div class="function-content grid-content bg-purple"> -->
-    <div align="center"><h1 style="center">整体展示图</h1></div>
-
-    <div class="div-left">
-      <the-graph></the-graph>
-    </div> 
-    <div class="div-right">
-      <el-button-group>
-        <el-button size="small" type="primary">下载<i class="el-icon-download"></i></el-button>
-        <br>
-        <el-upload
-          class="upload-demo"
-          action="https://jsonplaceholder.typicode.com/posts/"
-          :on-preview="handlePreview"
-          :on-remove="handleRemove"
-          :before-remove="beforeRemove"
-          multiple
-          :limit="1"
-          :on-exceed="handleExceed">
-          <el-button size="small" type="primary">上传<i class="el-icon-upload"></i></el-button>
-          <div slot="tip" class="el-upload__tip">上传不超过500kb的json图谱文件</div>
-        </el-upload>
-      </el-button-group>
-    </div> 
-
-   <!-- </div> -->
-  </div>
-
-  <div class="div-half">
-    <div align="center"><h1 style="center">知识角</h1></div>
-    <div class="div-knowlege-corner">
-        {{corner_story}}
-    </div>
-    <el-button round>查看子图</el-button>
-    <el-button round @click="ChangeStory">换个故事</el-button>
-  </div>
-
-  <div class="div-half-two">
-    <div class="div-entity-list"> 
-      <el-col :span=30>
-        <el-dropdown @command="handleBoardCommand">
-          <span class="el-dropdown-link">
-            {{currentBoards}}<i class="el-icon-arrow-down el-icon--right"></i>
-          </span>
-          <el-dropdown-menu slot="dropdown">
-                <el-dropdown-item
-                  v-for="(item,index) in list_boards"
-                  :key="index"
-                  :command="index"
-                  :value="item">
-                {{item}}
-                </el-dropdown-item>
-          </el-dropdown-menu>
-        </el-dropdown>
-      </el-col>
-
-      <div class="div-outline" style="width: 150px">
-  　　　　<ul class="ul-board" >
-  　　　　　　<li style="width: 100px" v-for="(item,index) in billboard"
-                v-bind:key="index"
-                v-bind:class="[ 'li-unactive',billboard_active[index]? 'li-active' : '']"
-                @click="selectEntity(item, index)" >{{item.name}}
-  　　　　　　</li>
-  　　　　</ul>
-      </div>
-    </div>
-
-    <div class="div-entity-intro">
-    {{entityInfo}}
-     </div>
-  </div> 
-
-  </div>
+</div>
 </template>
 
 <script>
@@ -183,9 +170,8 @@ export default {
       billboard_active: [],
       billboard: [],
       comments: [
-         "希望能多介绍一些哪吒的事迹～～" ,
-         "这个知识图谱可以帮助我很快的了解人物体系，点赞！",
-         "可以出一个山海经的知识图谱嘛？" 
+         "本模块暂不对外开放" ,
+         "如有需求，请联系我们，联系方式见页底",
       ],
       entityInfo:'人物介绍:选中人物时，这里出现相应的人物介绍，比如哪吒，中国古代神话传说中的神仙，佛教及道教护法神。兴盛于道教与民间信仰，在道教头衔为中坛元帅、通天太师、威灵显赫大将军、三坛海会大神等；尊称太子爷、三太子、善胜童子。',
       radio_source: 0,
@@ -231,9 +217,12 @@ export default {
       })
     },
 
-    changSource(){
-      var sourceName = ["0","西游记"]
-      this.$refs.treeCharts.setGraph(sourceName[this.radio_source])
+    changSource(source){
+      var sourceName = ["西游记"]
+      if (source.length == 0){
+        source = sourceName[this.radio_source]
+      }
+      this.$refs.treeCharts.setGraph(source)
     },
 
 　　selectEntity (item, index) {
@@ -325,7 +314,9 @@ export default {
   mounted() {
     getAllEntity().then(res => {
       this.billboard = res.data
-    })
+    });
+
+    this.changSource("西游记");
   }
 }
 </script>
@@ -335,7 +326,6 @@ export default {
   .m-box-card {
     margin-bottom: 10px;
     color: #666666;
-
     .m-icon {
       float: left;
       width: 60px;
@@ -387,6 +377,12 @@ export default {
     height: 60%;
 }
 
+.bg-background{
+    width: 100%;
+    background: #F8F8FC;
+    border-radius: 4px;
+}
+
 .div-comment{
   margin-top:30px;
   height:190px;
@@ -419,15 +415,44 @@ export default {
     border:1px solid;
     border-radius:2px;
   }
+
+  .div-top{
+    width:100%;
+    height:50%;
+    border: 1px solid #4660EF;
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin:10px;
+  }
+  .div-bottom{
+    width:100%;
+    height:50%;
+    border: 1px solid #4660EF;
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin:10px;
+  }
+
   .div-half{
-    float:left;width:48%;height:400px;margin:10px; border:2px solid #000
+    float:left;width:48%;
+    border: 1px solid #4660EF;
+    box-sizing: border-box;
+    border-radius: 4px;
+    height:400px;margin:10px;
   }
   .div-half-two{
-    float:left;width:48%;height:400px;margin:10px; border:2px solid #000
+    float:left;width:48%;
+    height:400px;margin:10px;     
+    border: 1px solid #4660EF;
+    box-sizing: border-box;
+    border-radius: 4px;
   }
 
   .div-knowlege-corner{
-    width:96%;height:68%;margin:2%; border:2px solid #000;
+    padding: 10px;
+    width:94%;height:68%;
+    margin:3% 3% 3% 3%; 
+    border:1px solid #4660EF;
     overflow:auto;
     overflow-y:scroll;
   }
@@ -439,18 +464,21 @@ export default {
     float:left;
   }
   .div-entity-list{
-    float:left;margin:3%;width:30%;height:70%;
-
+    
+    float:left;margin:3%;width:30%;height:90%;
   }
 
   .div-outline{
-    display:inline-block;margin-top:5%; width:100%;height:100%;border:1px solid #000;
+    background: #FFFFFF;
+    display:inline-block;margin-top:5%; width:60%;height:90%;border:1px solid #000;
     overflow:auto;
     overflow-y:scroll;
   }
 
   .div-entity-intro{
-    float:left;margin:3%;width:55%;height:90%;border:1px solid #000;
+    padding: 10px;
+    float:left;margin:3%;width:57%;height:90%; border: 1px solid #4660EF;
+    background:#FFFFFF;
     overflow:auto;
     overflow-y:scroll;
   }
@@ -468,5 +496,43 @@ export default {
     padding: 0px;
     margin: 0px;
   }
+  .echarts-container{
+    margin-top:2%;
+    height:85%;
+    width: 100%;
+  }
+
+  .other-container{
+    margin-top:2%;
+    height:85%;
+    width: 100%;
+  }
+
+  .h1-title{
+    font-family: PingFang SC;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 24px;
+    color: #2F2F3F;
+  }
+
+  .div-title{
+    margin-top:15px;
+  }
+
+  .home-background{
+    width: 100%;
+    background: #CCCCCC;
+    height: 100%;
+  }
+
+  .text{
+    font-family: PingFang SC;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
 
 </style>
